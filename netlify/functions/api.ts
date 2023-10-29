@@ -17,7 +17,7 @@ function trimTeamTitle(teamTitle) {
   return teamTitle.split(" U12")[0];
 }
 
-app.get('/hockey', async (req, res) => {
+router.get('/hockey', async (req, res) => {
   try {
     const response = await axios.get('https://gamesheetstats.com/api/useStandings/getDivisionStandings/3864?filter[divisions]=22290&filter[gametype]=overall&filter[limit]=1&filter[offset]=0');
     const tableData = response.data[0].tableData;
