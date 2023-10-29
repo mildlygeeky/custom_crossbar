@@ -18,4 +18,4 @@
   # Define which paths this specific [[headers]] block will cover.
   for = "/hockey/*"
     [headers.values]
-    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Origin = "https://dakboard.com"
