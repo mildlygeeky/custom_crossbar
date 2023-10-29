@@ -42,7 +42,7 @@ router.get('/hockey', async (req, res) => {
         winPercentage: tableData.ppct[i] 
       });
     }
-
+    res.set('Access-Control-Allow-Origin', '*');
     res.json(transformedData);
   } catch (error) {
     console.error('Error:', error);
