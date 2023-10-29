@@ -6,3 +6,8 @@
   from = "/feed/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
+[[redirects]]
+  force = true
+  from = "/hockey/*"
+  status = 200
+  to = "/.netlify/functions/api/:splat"
