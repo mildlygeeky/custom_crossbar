@@ -13,9 +13,4 @@
   from = "/hockey/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
-
-[[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/hockey/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "https://dakboard.com"
+  headers = {Access-Control-Allow-Origin = "https://dakboard.com"}
