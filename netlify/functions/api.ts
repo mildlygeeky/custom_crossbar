@@ -25,19 +25,14 @@ router.get('/hockey', async (req, res) => {
 
     for (let i = 0; i < tableData.ranks.length; i++) {
       transformedData.push({
-        rank: tableData.ranks[i],
-        teamName: trimTeamTitle(tableData.teamTitles[i].title),
+        teamName: trimTeamTitle(tableData.teamTitles[i].title) + ' (' + tableData.ranks[i] + ')',
         gamesPlayed: tableData.gp[i],
         wins: tableData.w[i],
         losses: tableData.l[i],
         ties: tableData.t[i],
-        points: tableData.pts[i],
         goalsFor: tableData.gf[i],
         goalsAgainst: tableData.ga[i],
         diff: tableData.diff[i],
-        powerPlayGoals: tableData.ppg[i],
-        shortHandedGoals: tableData.shg[i],
-        powerPlayGoalsAgainst: tableData.ppga[i],
         penaltyInfractionMinutes: tableData.pim[i],
         winPercentage: tableData.ppct[i] 
       });
