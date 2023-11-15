@@ -56,6 +56,9 @@ router.get('/feed', async (req, res) => {
     const cal = ical({
       prodId: '//crossbar.mildlygeeky.com//ical-generator//EN',
       events: filteredEvents.map((event) => ({
+        uid: event.uid,
+        sequence: event.sequence,
+        stamp: event.dtstamp,
         start: moment(event.start),
         end: moment(event.end),
         summary: replaceQuotes(event.summary),
