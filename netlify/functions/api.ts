@@ -19,7 +19,7 @@ function trimTeamTitle(teamTitle) {
 
 router.get('/hockey', async (req, res) => {
   try {
-    const response = await axios.get('https://gamesheetstats.com/api/useStandings/getDivisionStandings/3864?filter[divisions]=29834&filter[gametype]=overall&filter[limit]=1&filter[offset]=0');
+    const response = await axios.get('https://gamesheetstats.com/api/useStandings/getDivisionStandings/6742?filter[divisions]=38680&filter[gametype]=overall&filter[limit]=1&filter[offset]=0');
     const tableData = response.data[0].tableData;
     const transformedData = [];
 
